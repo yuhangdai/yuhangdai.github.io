@@ -1,8 +1,8 @@
 # Site settings
 title: TO BE BETTER
-SEOTitle: 心灵客栈 | 深入一点，你会更加快乐
+SEOTitle: 心灵客栈 
 header-img: img/post-bg-desk.jpg
-description: "Every failure is leading towards success."
+description: "The deeper you more,The happier you are"
 keyword: "yuhangdai,java,coder"
 url: "http://yuhangdai.github.io"          
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
