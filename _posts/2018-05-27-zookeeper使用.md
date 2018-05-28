@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      zookeeper学习笔记
-subtitle:   zookeeper环境搭建
-date:       2018-05-27
+title:      zookeeper瀛︿範绗旇
+subtitle:   zookeeper鐜鎼缓
+date:       2018-05-15
 author:     bang
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
@@ -10,15 +10,15 @@ tags:
     - zookeeper
 ---
 
->zookeeper环境搭建
+>zookeeper鐜鎼缓
 
 
-# 独立模式
+# 鐙珛妯″紡
 
-#### 下载zookeeper最新安装包
+#### 涓嬭浇zookeeper鏈�鏂板畨瑁呭寘
 
 
-# zookeeper常用命令
+# zookeeper甯哥敤鍛戒护
 	ls /
 	ls2 /
 	create path data
@@ -26,8 +26,8 @@ tags:
 	set path data
 	exists path
 	
-# zookeeper四字命令
-	通过telnet stat、dump命令查看zookeeper连接信息
+# zookeeper鍥涘瓧鍛戒护
+	閫氳繃telnet stat銆乨ump鍛戒护鏌ョ湅zookeeper杩炴帴淇℃伅
 	telnet ip port 
 	stat 
 	dump		
