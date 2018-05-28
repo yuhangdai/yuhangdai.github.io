@@ -3,12 +3,13 @@ layout:     post
 title:      zookeeper学习笔记
 subtitle:   zookeeper环境搭建
 date:       2018-05-15
-author:     bang
+author:     BY
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
     - zookeeper
 ---
+
 
 >zookeeper环境搭建
 
