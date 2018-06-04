@@ -28,12 +28,15 @@ tags:
 ### 安装python语言redis客户端
 1.查看linux是否安装python(默认安装的python版本,没有则安装)
 	python --version
+
 2.下载setuptools模块并解压缩文件
 	[下载地址](https://pypi.io/packages/source/s/setuptools/setuptools-33.1.1.zip)
+
 3.进入解压文件夹执行python命令安装reids hiredis客户端
 	sudo python -m easy_install redis hiredis
 	[安装报错 error: Setup script exited with error: command 'gcc' failed with exit status 1](./../img/redis-setup/setuptools-error-1.png)
 	问题:编译文件出错，需要安装python-devel(yum install python-devel) [原文路径](https://blog.csdn.net/qq_41746437/article/details/79340299 "why need python-devel")
+
 4.执行如下命令
 	python
 	>>>import redis
