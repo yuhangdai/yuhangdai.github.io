@@ -37,11 +37,11 @@ tags:
 	[安装报错 error: Setup script exited with error: command 'gcc' failed with exit status 1](./../img/redis-setup/setuptools-error-1.png)
 	问题:编译文件出错，需要安装python-devel(yum install python-devel) [原文路径](https://blog.csdn.net/qq_41746437/article/details/79340299 "why need python-devel")
 
-4.执行如下命令
-	python
-	>>>import redis
-	>>>conn = redis.Redis()
-	>>>conn.set('hello','world')
+4.执行如下命令  
+	python  
+	>>>import redis  
+	>>>conn = redis.Redis()  
+	>>>conn.set('hello','world')  
 若返回true则表示成功（前提是redis服务要启动，否则会报连接异常错误）
 
 ### 将redis设置为开机自启动
