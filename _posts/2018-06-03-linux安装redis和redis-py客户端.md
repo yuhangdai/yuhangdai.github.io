@@ -42,5 +42,6 @@ tags:
 若返回true则表示成功（前提是redis服务要启动，否则会报连接异常错误）
 
 ### 将redis设置为开机自启动
+[原文连接](http://blog.csdn.net/lovejj1994/article/details/53096268)
 
 	
