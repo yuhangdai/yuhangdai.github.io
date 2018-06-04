@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      redis°²×°
-subtitle:   linuxÏµÍ³°²×°redisÒÔ¼°redis-python¿Í»§¶Ë
+title:      rediså®‰è£…
+subtitle:   linuxç³»ç»Ÿå®‰è£…redisä»¥åŠredis-pythonå®¢æˆ·ç«¯
 date:       2018-06-03
 author:     bang
 header-img: img/post-bg-ios9-web.jpg
@@ -10,41 +10,41 @@ tags:
     - redis
 ---
 
-> redis-in-actionÑ§Ï°±Ê¼Ç
+> redis-in-actionå­¦ä¹ ç¬”è®°
 
-# linuxÏµÍ³°²×°redis
+# linuxç³»ç»Ÿå®‰è£…redis
 
-### °²×°µ¥»úredis·şÎñ
+### å®‰è£…å•æœºredisæœåŠ¡
 
-1. ÏÂÔØredisÑ¹Ëõ°ü²¢½âÑ¹ [ÏÂÔØÂ·¾¶](https://redis.io/)
-2. makeÃüÁî±àÒëÔ´ÎÄ¼ş 
-	![±àÒë±¨´í gcc command not found](./../img/redis-setup/make-error-1.png)
-	½â¾ö·½·¨£ºlinuxÏµÍ³ÏÂÏÂÔØgccÃüÁî yum install gcc
-	![±àÒë±¨´í jemalloc/jemalloc.h: No such file or directory](./../img/redis-setup/make-error-2.png)
-	½â¾ö·½·¨: [Ö´ĞĞmakeÃüÁîÊ±ÉèÖÃMALLOC=jemalloc²ÎÊı](https://blog.csdn.net/bugall/article/details/45914867)
+1. ä¸‹è½½rediså‹ç¼©åŒ…å¹¶è§£å‹ [ä¸‹è½½è·¯å¾„](https://redis.io/)
+2. makeå‘½ä»¤ç¼–è¯‘æºæ–‡ä»¶ 
+	![ç¼–è¯‘æŠ¥é”™ gcc command not found](./../img/redis-setup/make-error-1.png)
+	è§£å†³æ–¹æ³•ï¼šlinuxç³»ç»Ÿä¸‹ä¸‹è½½gccå‘½ä»¤ yum install gcc
+	![ç¼–è¯‘æŠ¥é”™ jemalloc/jemalloc.h: No such file or directory](./../img/redis-setup/make-error-2.png)
+	è§£å†³æ–¹æ³•: [æ‰§è¡Œmakeå‘½ä»¤æ—¶è®¾ç½®MALLOC=jemallocå‚æ•°](https://blog.csdn.net/bugall/article/details/45914867)
 3. make install
-4. redis-server redis.confÆô¶¯redis³ÌĞò
+4. redis-server redis.confå¯åŠ¨redisç¨‹åº
 
-### °²×°pythonÓïÑÔredis¿Í»§¶Ë
-1.²é¿´linuxÊÇ·ñ°²×°python(Ä¬ÈÏ°²×°µÄpython°æ±¾,Ã»ÓĞÔò°²×°)
+### å®‰è£…pythonè¯­è¨€rediså®¢æˆ·ç«¯
+1.æŸ¥çœ‹linuxæ˜¯å¦å®‰è£…python(é»˜è®¤å®‰è£…çš„pythonç‰ˆæœ¬,æ²¡æœ‰åˆ™å®‰è£…)
 	python --version
 
-2.ÏÂÔØsetuptoolsÄ£¿é²¢½âÑ¹ËõÎÄ¼ş
-	[ÏÂÔØµØÖ·](https://pypi.io/packages/source/s/setuptools/setuptools-33.1.1.zip)
+2.ä¸‹è½½setuptoolsæ¨¡å—å¹¶è§£å‹ç¼©æ–‡ä»¶
+	[ä¸‹è½½åœ°å€](https://pypi.io/packages/source/s/setuptools/setuptools-33.1.1.zip)
 
-3.½øÈë½âÑ¹ÎÄ¼ş¼ĞÖ´ĞĞpythonÃüÁî°²×°reids hiredis¿Í»§¶Ë
+3.è¿›å…¥è§£å‹æ–‡ä»¶å¤¹æ‰§è¡Œpythonå‘½ä»¤å®‰è£…reids hirediså®¢æˆ·ç«¯
 	sudo python -m easy_install redis hiredis
-	[°²×°±¨´í error: Setup script exited with error: command 'gcc' failed with exit status 1](./../img/redis-setup/setuptools-error-1.png)
-	ÎÊÌâ:±àÒëÎÄ¼ş³ö´í£¬ĞèÒª°²×°python-devel(yum install python-devel) [Ô­ÎÄÂ·¾¶](https://blog.csdn.net/qq_41746437/article/details/79340299 "why need python-devel")
+	[å®‰è£…æŠ¥é”™ error: Setup script exited with error: command 'gcc' failed with exit status 1](./../img/redis-setup/setuptools-error-1.png)
+	é—®é¢˜:ç¼–è¯‘æ–‡ä»¶å‡ºé”™ï¼Œéœ€è¦å®‰è£…python-devel(yum install python-devel) [åŸæ–‡è·¯å¾„](https://blog.csdn.net/qq_41746437/article/details/79340299 "why need python-devel")
 
-4.Ö´ĞĞÈçÏÂÃüÁî  
-	python  
-	>>>import redis  
-	>>>conn = redis.Redis()  
-	>>>conn.set('hello','world')  
-Èô·µ»ØtrueÔò±íÊ¾³É¹¦£¨Ç°ÌáÊÇredis·şÎñÒªÆô¶¯£¬·ñÔò»á±¨Á¬½ÓÒì³£´íÎó£©
+4.æ‰§è¡Œå¦‚ä¸‹å‘½ä»¤  
+  python  
+    >>>import redis  
+    >>>conn = redis.Redis()  
+    >>>conn.set('hello','world')  
+è‹¥è¿”å›trueåˆ™è¡¨ç¤ºæˆåŠŸï¼ˆå‰ææ˜¯redisæœåŠ¡è¦å¯åŠ¨ï¼Œå¦åˆ™ä¼šæŠ¥è¿æ¥å¼‚å¸¸é”™è¯¯ï¼‰
 
-### ½«redisÉèÖÃÎª¿ª»ú×ÔÆô¶¯
-[Ô­ÎÄÁ¬½Ó](http://blog.csdn.net/lovejj1994/article/details/53096268)
+### å°†redisè®¾ç½®ä¸ºå¼€æœºè‡ªå¯åŠ¨
+[åŸæ–‡è¿æ¥](http://blog.csdn.net/lovejj1994/article/details/53096268)
 
 	
