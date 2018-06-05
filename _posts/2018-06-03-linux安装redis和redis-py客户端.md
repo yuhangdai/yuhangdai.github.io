@@ -18,9 +18,9 @@ tags:
 
 1. 下载redis压缩包并解压 [下载路径](https://redis.io/)
 2. make命令编译源文件 
-	![编译报错 gcc command not found](./../img/redis-setup/make-error-1.png)
+	![编译报错 gcc command not found](/img/redis-setup/make-error-1.png)
 	解决方法：linux系统下下载gcc命令 yum install gcc
-	![编译报错 jemalloc/jemalloc.h: No such file or directory](./../img/redis-setup/make-error-2.png)
+	![编译报错 jemalloc/jemalloc.h: No such file or directory](/img/redis-setup/make-error-2.png)
 	解决方法: [执行make命令时设置MALLOC=jemalloc参数](https://blog.csdn.net/bugall/article/details/45914867)
 3. make install
 4. redis-server redis.conf启动redis程序
@@ -34,7 +34,7 @@ tags:
 
 3.进入解压文件夹执行python命令安装reids hiredis客户端
 	sudo python -m easy_install redis hiredis
-	[安装报错 error: Setup script exited with error: command 'gcc' failed with exit status 1](./../img/redis-setup/setuptools-error-1.png)
+	[安装报错 error: Setup script exited with error: command 'gcc' failed with exit status 1](/img/redis-setup/setuptools-error-1.png)
 	问题:编译文件出错，需要安装python-devel(yum install python-devel) [原文路径](https://blog.csdn.net/qq_41746437/article/details/79340299 "why need python-devel")
 
 4.执行如下命令  
