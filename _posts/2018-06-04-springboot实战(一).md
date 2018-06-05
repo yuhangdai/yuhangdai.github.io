@@ -57,7 +57,10 @@ tags:
   2. 定义拦截注解    
   3. 编写待拦截类，并在相应方法上添加注解      
   4. 编写切面（定义切点PointCut Advice 切面公共方法逻辑）        
-  5. 配置切面类Java配置，并开启切面注解支持        
+  5. 配置切面类Java配置，并开启切面注解支持  
+  
+  ### 示例代码
+  [链接地址](https://github.com/yuhangdai/springboot-demo)
 
 
 
