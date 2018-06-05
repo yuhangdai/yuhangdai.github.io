@@ -33,7 +33,7 @@ tags:
 
  ### AOP
    #### springboot引入aop支持
-   1) 引入依赖包 spring-aop aspectjrt aspectjweaver
+   1. 引入依赖包 spring-aop aspectjrt aspectjweaver
 
  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
 	<dependency>
@@ -54,10 +54,10 @@ tags:
 		<version>1.9.1</version>
 	</dependency>
 
-  2) 定义拦截注解    
-  3）编写待拦截类，并在相应方法上添加注解      
-  4) 编写切面（定义切点PointCut Advice 切面公共方法逻辑）        
-  5）配置切面类Java配置，并开启切面注解支持        
+  2. 定义拦截注解    
+  3. 编写待拦截类，并在相应方法上添加注解      
+  4. 编写切面（定义切点PointCut Advice 切面公共方法逻辑）        
+  5. 配置切面类Java配置，并开启切面注解支持        
 
 
 
