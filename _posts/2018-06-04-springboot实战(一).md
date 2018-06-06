@@ -1,13 +1,14 @@
 ---
 layout:     post
-title:      markdown语法
-subtitle:   初识markdown语法
-date:       2018-06-03
+title:      springboot学习
+subtitle:   spring基础配置
+date:       2018-06-04
 author:     bang
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - markdown
+    - spring 
+    - springboot
 ---
 
 >springboot学习笔记
