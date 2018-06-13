@@ -13,7 +13,7 @@ tags:
 
 >springboot学习笔记
 
-# springboot学习笔记-spring基础(二)
+# spring基础(二)
 
 ### @Value使用Spring EL为属性注入值
 

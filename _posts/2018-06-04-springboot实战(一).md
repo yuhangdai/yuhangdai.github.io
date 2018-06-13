@@ -13,7 +13,7 @@ tags:
 
 >springboot学习笔记
 
-# springboot学习笔记-spring基础(一)
+# spring基础(一)
 
 ### 基础配置
   #### spring框架四大原则
