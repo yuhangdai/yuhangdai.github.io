@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:     	maven-assembly-plugin´ò°ü¹¤¾ß
-subtitle:   assembly´ò°ü¹¤¾ßÊ¹ÓÃ
+title:     	maven-assembly-pluginæ‰“åŒ…å·¥å…·
+subtitle:   assemblyæ‰“åŒ…å·¥å…·ä½¿ç”¨
 date:       2018-07-18
 author:     bang
 header-img: img/post-bg-ios9-web.jpg
@@ -11,118 +11,118 @@ tags:
     - java
 ---
 
->assembly´ò°ü¹¤¾ßÊ¹ÓÃ
+>assemblyæ‰“åŒ…å·¥å…·ä½¿ç”¨
 
-# assemblyÊ¹ÓÃ
+# assemblyä½¿ç”¨
 
-### maven-assembly-pluginÏîÄ¿´ò°ü¹¤¾ßÊ¹ÓÃ
-   1. pom.xmlÎÄ¼şÖĞÒıÈëÏà¹Ø²å¼ş
-   <pre>
-			<build>
-				<resources>
-					<!--
-             | ÓĞ¼¸¸öÂ·¾¶£¬¾Í¶ÔÓ¦¼¸¸ö resource ±êÇ©
-             | »ò£º
-             | Ò»¸öÄ¿Â¼£¬¶ÔÓ¦Ò»¸ö resource ±êÇ©
-          -->
-					<resource>
-						<directory>src/main/resources</directory>
-						<filtering>true</filtering>
-						<includes>
-							<include>application.properties</include>
-						</includes>
-					</resource>
-					<resource>
-						<directory>src/main/resources</directory>
-						<filtering>false</filtering>
-						<excludes>
-							<exclude>application.properties</exclude>
-						</excludes>
-					</resource>
-				</resources>
-				<plugins>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-						<configuration>
-							<descriptors>
-								<descriptor>src/main/assembly/assembly.xml</descriptor>
-							</descriptors>
-						</configuration>
-						<executions>
-							<execution>
-								<id>make-assembly</id>
-								<phase>package</phase>
-								<goals>
-									<goal>single</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-	</pre>
-	2.ÔÚsrc/mainÏÂĞÂ½¨assemblyÎÄ¼ş¼Ğ,²¢ÔÚÆäÏÂÔö¼ÓbinÎÄ¼ş¼ĞºÍassembly.xmlÎÄ¼ş
-		src
-			 --main
-			 		 -- assembly
-			 		 					-- bin 
-			 		 							-- boot.sh
-			 		 					-- assebmly.xml
-			 		 -- java 
-			 		 -- resources 
-			 --test
+### maven-assembly-pluginé¡¹ç›®æ‰“åŒ…å·¥å…·ä½¿ç”¨
+   1. pom.xmlæ–‡ä»¶ä¸­å¼•å…¥ç›¸å…³æ’ä»¶
+<pre>
+    <build>
+		<resources>
+			<!--
+			| æœ‰å‡ ä¸ªè·¯å¾„ï¼Œå°±å¯¹åº”å‡ ä¸ª resource æ ‡ç­¾
+			| æˆ–ï¼š
+			| ä¸€ä¸ªç›®å½•ï¼Œå¯¹åº”ä¸€ä¸ª resource æ ‡ç­¾
+			-->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>application.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>application.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+				<descriptors>
+					<descriptor>src/main/assembly/assembly.xml</descriptor>
+				</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id>
+						<phase>package</phase>
+						<goals>
+						<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</pre>
+	2.åœ¨src/mainä¸‹æ–°å»ºassemblyæ–‡ä»¶å¤¹,å¹¶åœ¨å…¶ä¸‹å¢åŠ binæ–‡ä»¶å¤¹å’Œassembly.xmlæ–‡ä»¶
+	src
+		--main
+			-- assembly
+				-- bin 
+					-- boot.sh
+				-- assebmly.xml
+			-- java 
+			-- resources 
+		--test
 			 
-		assembly.xml ÎÄ¼şÄÚÈİ(¾ßÌåº¬Òå²Î¼ûÏà¹Ø×ÊÁÏ)
-		<pre>
-				<!--
-				 - Copyright 1999-2011 Alibaba Group.
-				 -
-				 - Licensed under the Apache License, Version 2.0 (the "License");
-				 - you may not use this file except in compliance with the License.
-				 - You may obtain a copy of the License at
-				 -
-				 -      http://www.apache.org/licenses/LICENSE-2.0
-				 -
-				 - Unless required by applicable law or agreed to in writing, software
-				 - distributed under the License is distributed on an "AS IS" BASIS,
-				 - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-				 - See the License for the specific language governing permissions and
-				 - limitations under the License.
-				-->
-				<assembly>
-				    <id>assembly</id>
-				    <formats>
-				        <format>tar.gz</format>
-				    </formats>
-				    <includeBaseDirectory>true</includeBaseDirectory>
-				    <fileSets>
-				        <fileSet>
-				            <directory>src/main/assembly/bin</directory>
-				            <outputDirectory>bin</outputDirectory>
-				            <fileMode>0755</fileMode>
-				        </fileSet>
-				        <fileSet>
-				            <directory>src/main/resources</directory>
-				            <outputDirectory>config</outputDirectory>
-				            <includes>
-				                <include>logback-spring.xml</include>
-				                <include>application.properties</include>
-				            </includes>
-				            <fileMode>0644</fileMode>
-				        </fileSet>
-				    </fileSets>
-				    <dependencySets>
-				        <dependencySet>
-				            <outputDirectory>lib</outputDirectory>
-				        </dependencySet>
-				    </dependencySets>
-				</assembly>
-		</pre>
+		assembly.xml æ–‡ä»¶å†…å®¹(å…·ä½“å«ä¹‰å‚è§ç›¸å…³èµ„æ–™)
+	<pre>
+		<!--
+		 - Copyright 1999-2011 Alibaba Group.
+		 -
+		 - Licensed under the Apache License, Version 2.0 (the "License");
+		 - you may not use this file except in compliance with the License.
+		 - You may obtain a copy of the License at
+		 -
+		 -      http://www.apache.org/licenses/LICENSE-2.0
+		 -
+		 - Unless required by applicable law or agreed to in writing, software
+		 - distributed under the License is distributed on an "AS IS" BASIS,
+		 - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+		 - See the License for the specific language governing permissions and
+		 - limitations under the License.
+		-->
+		<assembly>
+			<id>assembly</id>
+			<formats>
+				<format>tar.gz</format>
+			</formats>
+			<includeBaseDirectory>true</includeBaseDirectory>
+			<fileSets>
+				<fileSet>
+					<directory>src/main/assembly/bin</directory>
+					<outputDirectory>bin</outputDirectory>
+					<fileMode>0755</fileMode>
+				</fileSet>
+				<fileSet>
+					<directory>src/main/resources</directory>
+					<outputDirectory>config</outputDirectory>
+					<includes>
+						<include>logback-spring.xml</include>
+						<include>application.properties</include>
+					</includes>
+					<fileMode>0644</fileMode>
+				</fileSet>
+			</fileSets>
+			<dependencySets>
+				<dependencySet>
+					<outputDirectory>lib</outputDirectory>
+				</dependencySet>
+			</dependencySets>
+		</assembly>
+	</pre>
 		
-		3. boot.sh ÎÄ¼şÄÚÈİ
-		<pre>
+		3. boot.sh æ–‡ä»¶å†…å®¹
+	<pre>
 			#!/bin/sh
-				# ¶¨Òå¼¸¸ö±äÁ¿ 
+				# å®šä¹‰å‡ ä¸ªå˜é‡ 
 				PRG_NAME=cu-serviceapi-server
 				WORK_DIR=$(cd `dirname $0`; pwd)/../
 				LOG_DIR="$WORK_DIR"/logs
@@ -133,9 +133,9 @@ tags:
 				CLASS_PATH=" -classpath "$(echo ${WORK_DIR}lib/*.jar|sed 's/ /:/g')
 				#CLASS_PATH=" -Djava.ext.dirs=lib "
 				
-				# ĞŞ¸Ä³É×Ô¼ºµÄÆô¶¯Àà
+				# ä¿®æ”¹æˆè‡ªå·±çš„å¯åŠ¨ç±»
 				CLASS=com.aotain.serviceapi.server.ServiceapiServerApplication
-				# springbootÏà¹ØÅäÖÃÎÄ¼şÂ·¾¶
+				# springbootç›¸å…³é…ç½®æ–‡ä»¶è·¯å¾„
 				CONFIG_PATH=" --spring.config.location=$WORK_DIR/config/application.properties --logging.config=$WORK_DIR/config/logback-spring.xml"
 				
 				if [ ! -d "${LOG_DIR}" ]; then
@@ -193,8 +193,7 @@ tags:
 				esac
 				
 				exit 0
-				
-				
+						
 		</pre>	 			
 	
 	
