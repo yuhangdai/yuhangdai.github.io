@@ -1,8 +1,11 @@
 ---------about work-----------
 
 1.common实现数据库redis连接
+	-- refer     https://github.com/yuhangdai/common
 
-2.springmvc返回指定字段
+2.springmvc返回指定字段   
+	-- refer     https://github.com/k55k32/cms-admin-end/tree/master/src/main/java/diamond/cms/server
+	-- refer     https://my.oschina.net/u/2391658/blog/868026
 
 3.模板设计模式
 
@@ -12,15 +15,15 @@
 
 8.kafka实现leader选举
 
-7.springboot/springcloud(------TODO)
+7.springboot/springcloud
 
-8.mysql数据库优化(------TODO)
+8.mysql数据库优化
 
 9.spring-data-jpa实现基本的增删改查(spring-data-jpa与mybatis联合使用)
 
 10.根据wsdl文件生成webservice客户端调用方法
 
-11.xsd文件
+11.xsd文件处理
 
 
 
