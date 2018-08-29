@@ -18,6 +18,10 @@
 
 9.spring-data-jpa实现基本的增删改查(spring-data-jpa与mybatis联合使用)
 
+10.根据wsdl文件生成webservice客户端调用方法
+
+11.xsd文件
+
 
 
 
