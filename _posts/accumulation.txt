@@ -1,0 +1,29 @@
+--------linux常见操作-----------
+
+-- 追加方式查看文件（一般查看一些动态日志文件）
+tail -f filename 
+
+-- 查看redis jedis pooljar包
+lsof -p port | grep -E "jedis|pool|redis"
+
+
+
+
+
+
+
+---------about -----------
+
+1.common实现数据库redis连接
+
+2.springmvc返回指定字段
+
+3.模板设计模式
+
+4.单例设计模式
+
+5.代码可维护性、简洁性、可读性
+
+6.springboot/springcloud(------TODO)
+
+7.mysql数据库优化(------TODO)
