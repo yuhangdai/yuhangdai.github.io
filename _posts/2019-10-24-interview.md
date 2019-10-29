@@ -28,7 +28,7 @@ tags:
 	- 用户量大
 
 		
-#### redis
+#### [redis文档](https://gnuhpc.gitbooks.io/redis-all-about/Problem/memory/scan-bigkey.html)
 
 1. [**hash算法和一致性hash算法**](https://segmentfault.com/a/1190000017847097)
 
@@ -82,7 +82,7 @@ tags:
 	- 如果删除大key，DEL命令可能阻塞Redis进程数十秒，使得其他请求阻塞，对应用程序和
 	Redis集群可用性造成严重的影响
 	
-	[**解决方案**](https://blog.csdn.net/u013474436/article/details/88808914)
+	**解决方案**[1](https://blog.csdn.net/u013474436/article/details/88808914)[2](https://www.iteye.com/blog/carlosfu-2269687)
 	-	对象需要每次都整存整取
 		可以尝试将对象分拆成几个key-value， 使用multiGet获取值，这样分拆的意义在于分拆
 		单次操作的压力，将操作压力平摊到多个redis实例中，降低对单个redis的IO影响；
@@ -102,9 +102,14 @@ tags:
 	
 ### springcloud
 
-	1. **Eureka**
-	2. **Feign**
-	3. **Ribbon**
-	4. **Hystrix**
-	5. **Zuul**
+- **Eureka**
+- **Feign**
+- **Ribbon**
+- **Hystrix**
+- **Zuul**
+	
+	
+### 架构演变
+	1.单节点，单应用，单数据库
+	2.单节点，单应用
 	
