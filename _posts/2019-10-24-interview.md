@@ -27,6 +27,10 @@ tags:
 		大量的缓存不命中, 使请求直击后端,造成服务提供者超负荷运行,引起服务不可用.
 	- 用户量大
 
+2. [**java定时任务**](https://juejin.im/post/5ca761c36fb9a05e2726b18e)
+	**动态修改定时任务cron表达式**
+		
+
 		
 #### [redis文档](https://gnuhpc.gitbooks.io/redis-all-about/Problem/memory/scan-bigkey.html)
 
@@ -96,8 +100,9 @@ tags:
 
 	
 ### springboot
+1. [已有parent的module项目中引入springboot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-maven-without-a-parent)
+2. [自动配置原理]()
 
-1. [自动配置原理]()
 
 	
 ### springcloud
