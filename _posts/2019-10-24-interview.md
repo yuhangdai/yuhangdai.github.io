@@ -30,6 +30,9 @@ tags:
 2. [**java定时任务**](https://juejin.im/post/5ca761c36fb9a05e2726b18e)
 	**动态修改定时任务cron表达式**
 		
+#### mybatis原理
+	mybatis赋值流程(mybatis按select顺序进行赋值，如select a，b，c，d则依次为a b c d属性赋值)
+	详见DefaultResultSetHandler#applyAutomaticMappings()
 
 		
 #### [redis文档](https://gnuhpc.gitbooks.io/redis-all-about/Problem/memory/scan-bigkey.html)
@@ -101,6 +104,35 @@ tags:
 	
 ### springboot
 1. [已有parent的module项目中引入springboot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-maven-without-a-parent)
+在pom文件中添加如下代码：
+
+		<dependencies>
+		  ...
+		  <dependency>
+		      <groupId>org.springframework.boot</groupId>
+		      <artifactId>spring-boot-autoconfigure</artifactId>
+		      <version>${spring.boot.version}</version>
+		  </dependency>
+		</dependencies>
+		<dependencyManagement>
+		  <dependencies>
+		      <dependency>
+		          <groupId>org.springframework.boot</groupId>
+		          <artifactId>spring-boot-autoconfigure</artifactId>
+		          <version>${spring.boot.version}</version>
+		          <type>pom</type>
+		          <scope>import</scope>
+		      </dependency>
+		      <dependency>
+		          <groupId>org.springframework.boot</groupId>
+		          <artifactId>spring-boot-dependencies</artifactId>
+		          <version>${spring.boot.version}</version>
+		          <type>pom</type>
+		          <scope>import</scope>
+		      </dependency>
+		  </dependencies>
+		</dependencyManagement>
+		
 2. [自动配置原理]()
 
 
