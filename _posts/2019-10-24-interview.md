@@ -149,4 +149,32 @@ tags:
 ### 架构演变
 	1.单节点，单应用，单数据库
 	2.单节点，单应用
-	
+
+
+### javascript
+#### bootstrap table
+	1.**bootstrap table 增加序列号**
+
+		{	
+			title: '序号',
+			width:'60px',
+			formatter:function (value, row, index){
+        var page = $('#helpTable').bootstrapTable("getPage");
+        return page.pageSize*(page.pageNumber - 1) + index + 1;
+    	}
+    },
+  2.bootstrap table **刷新数据**
+
+		searchBtnClick:function () {
+			$("#searchBtn").on('click',function () {
+				$("#helpTable").bootstrapTable('refreshOptions',{pageNumber:1, url:systemHelpUrl.listData});
+				$("#helpTable").bootstrapTable('refresh', systemHelpUrl.listData);
+			})
+		},
+
+#### prettyfile
+
+	动态增加的input[file](prettyfile)初始化
+		$("#inputid").prettyFile();
+	重复初始化问题
+		会导致出现多的input框
