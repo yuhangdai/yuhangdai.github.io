@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      shadowsocks°²×°
+title:      shadowsockså®‰è£…
 subtitle:   shadowsocks
 date:       2019-10-24
 author:     bang
@@ -11,13 +11,13 @@ tags:
     - shadowsocks
 ---
 
-### **°²×°shadowsocks-libev**
+### **å®‰è£…shadowsocks-libev**
 	cd /etc/yum.repos.d/
 	curl -O url
 	centos7 url=https://copr.fedorainfracloud.org/coprs/librehat/shadowsocks/repo/epel-7/librehat-shadowsocks-epel-7.repo
 	centos8 url=https://copr.fedorainfracloud.org/coprs/outman/shadowsocks-libev/repo/epel-8/outman-shadowsocks-libev-epel-8.repo
 
-°²×°
+å®‰è£…
 
 ?	yum update
 ?	yum install -y epel-release
@@ -26,39 +26,42 @@ tags:
 ?	
 ?	
 
-### ĞŞ¸Äss²ÎÊı
-	cd /etc/shadowsocks-libev£¬²é¿´ÊÇ·ñ´æÔÚconfig.json£¬Èç¹û²»´æÔÚ¸ÃÎÄ¼şÔòĞèÒªĞÂ½¨¡£
+### ä¿®æ”¹sså‚æ•°
+	cd /etc/shadowsocks-libevï¼ŒæŸ¥çœ‹æ˜¯å¦å­˜åœ¨config.jsonï¼Œå¦‚æœä¸å­˜åœ¨è¯¥æ–‡ä»¶åˆ™éœ€è¦æ–°å»ºã€‚
 	
-	ÅäÖÃ¶ÔÓ¦µÄ²ÎÊı£º
+	é…ç½®å¯¹åº”çš„å‚æ•°ï¼š
 	
-	server£ºµ±Ç°×Ô¼ºµÄ·şÎñÆ÷µÄµØÖ·
-	±ÈÈç£º0.0.0.0
+	serverï¼šå½“å‰è‡ªå·±çš„æœåŠ¡å™¨çš„åœ°å€
+	æ¯”å¦‚ï¼š0.0.0.0
 	
-	server_port£ºss·şÎñµÄ¶Ë¿Ú
-	Ò»°ãÒª´óÓÚ1024£¬Ğ¡ÓÚ65536,ĞèÒªÈ·±£·À»ğÇ½¿ª·Å´Ë¶Ë¿Ú
+	server_portï¼šssæœåŠ¡çš„ç«¯å£
+	ä¸€èˆ¬è¦å¤§äº1024ï¼Œå°äº65536,éœ€è¦ç¡®ä¿é˜²ç«å¢™å¼€æ”¾æ­¤ç«¯å£
 	
-	password£ºss¿Í»§¶ËÁ¬½ÓÊ±ÒªÊ¹ÓÃµÄÃÜÂë
+	passwordï¼šsså®¢æˆ·ç«¯è¿æ¥æ—¶è¦ä½¿ç”¨çš„å¯†ç 
 
 
-	method£º¼ÓÃÜ·½Ê½
-	³£ÓÃµÄ·½Ê½ÊÇ£ºaes-256-cfb
+	methodï¼šåŠ å¯†æ–¹å¼
+	å¸¸ç”¨çš„æ–¹å¼æ˜¯ï¼šaes-256-cfb
 	
-	timeout£º³¬Ê±Ê±¼ä£¬µ¥Î»£ºÃë
-	±ÈÈç£º300
+	timeoutï¼šè¶…æ—¶æ—¶é—´ï¼Œå•ä½ï¼šç§’
+	æ¯”å¦‚ï¼š300
 	
-	mode£ºss·şÎñµÄÄ£Ê½
-	±ÈÈç£ºtcp_and_udp£¬¼´Ö§³ÖtcpÒ²Ö§³Öudp
+	modeï¼šssæœåŠ¡çš„æ¨¡å¼
+	æ¯”å¦‚ï¼štcp_and_udpï¼Œå³æ”¯æŒtcpä¹Ÿæ”¯æŒudp
 
-### **´ò¿ª·À»ğÇ½¶ÔÓ¦¶Ë¿Ú**
+### **æ‰“å¼€é˜²ç«å¢™å¯¹åº”ç«¯å£**
 	firewall-cmd --permanent --add-port=xxxx/tcp
+	
+	How to Fix â€œfirewall-cmd: command not foundâ€ Error in RHEL/CentOS 7 ["https://www.tecmint.com/fix-firewall-cmd-command-not-found-error/"]
+	 ERROR: Exception DBusException: org.freedesktop.DBus.Error.AccessDenied:...n file["https://stackoverflow.com/questions/31397121/centos7-firewall-not-running"]
 	firewall-cmd --reload
 	
-	È·ÈÏ¶Ë¿ÚÊÇ·ñÒÑ¿ª·Å
+	ç¡®è®¤ç«¯å£æ˜¯å¦å·²å¼€æ”¾
 	netstat -tnlp | grep xxxx
 
-### **Æô¶¯shadowsocks**
+### **å¯åŠ¨shadowsocks**
 	systemctl restart shadowsocks-libev
-ÉèÖÃ¿ª»ú×ÔÆô¶¯
+è®¾ç½®å¼€æœºè‡ªå¯åŠ¨
 	systemctl enable shadowsocks-libev
-²é¿´·şÎñ×´Ì¬
+æŸ¥çœ‹æœåŠ¡çŠ¶æ€
 	systemctl status shadowsocks-libev	
