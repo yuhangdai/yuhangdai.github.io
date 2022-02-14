@@ -1,4 +1,4 @@
-### arm架构hadoop客户端安装
+### arm架构hadoop客户端安装(tar.gz资源文件在百度网盘)
 
 1.查看cdh对应的hadoop`版本`
 
